@@ -1,0 +1,21 @@
+* TODO Portfolio Work List
+** Content
+*** Build Site Structure
+    - Semantic structure
+    - Based on:
+      - HTML5 Boiler plate
+      - bootstrap
+      - Udacity course notes
+    - Articles : Use these for the the portfolio pieces
+*** Write the Content
+****
+** Styles
+** Imagery
+*** TODO Apple touch icon
+*** TODO Favicon
+*** TODO Select some good images for the site
+    There need to various sized versions (pixel densites etc.) to allow
+    for rposnive resizing. Possibly also different crops.
+** Effects
+*** Typography
+    - http://letteringjs.com I like this but not that semantic...
