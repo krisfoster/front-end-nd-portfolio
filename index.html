@@ -7,144 +7,135 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description"
               content="Portfolio for Kris Foster - a front-end Ninja!">
-        <title>Kris Foster - Front-end Ninja!</title>
+        <title>Kris Foster - Full Stack Web Ninja!</title>
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/main.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <link href='http://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono:400,700,500' rel='stylesheet' type='text/css'>
     </head>
-    <body>
+    <body class="container">
         <header>
+            <!-- TODO: Need a logo here -->
             <h1>Kris Foster</h1>
-            <h2>Full Stack Web Developer</h2>
+            <h2>8-bit Ninja!</h2>
         </header>
         <nav id="site-nav">
         </nav>
         <main>
             <section id="hero">
                 <!-- TODO : Carousel? -->
+                <img src="./imgs/slice-1@3x.png" srcset=""
+                     alt="Girl with numerous questions" title="Do you have Questions? I know I do.">
             </section>
             <section id="featured-work">
                 <header>
-                    <h3>Some of my work</h3>
-                    <!-- Featured Item 1 -->
-                    <article>
-                        <header>
-                            <h4>Work Title 1</h4>
-                        </header>
-                        <picture>
-                            <source srcset="/images/img.png" media="(min-width: 300px)">
-                            <source srcset="/images/img.png" media="(min-width: 300px)">
-                            <img src="" srcset="" alt="" title="">
-                        </picture>
-                        <details>
-                            <summary>
-                                Vivamus id enim.
-                            </summary>
-                            <p>
-                                Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit.  Donec
-                                hendrerit tempor tellus.  Donec
-                                pretium posuere tellus.  Proin quam
-                                nisl, tincidunt et, mattis eget,
-                                convallis nec, purus.  Cum sociis
-                                natoque penatibus et magnis dis
-                                parturient montes, nascetur ridiculus
-                                mus.  Nulla posuere.  Donec vitae
-                                dolor.  Nullam tristique diam non
-                                turpis.  Cras placerat accumsan nulla.
-                                Nullam rutrum.  Nam vestibulum
-                                accumsan nisl.
-                            </p>
-                            <footer>
-                                <a href="#" title="Link to the source code for the project">source code for project</a>
-                            </footer>
-                        </details>
-                    </article>
-                    <!-- Featured Item 2 -->
-                    <article>
-                        <header>
-                            <h4>Phasellus purus.</h4>
-                        </header>
-                        <picture>
-                            <source srcset="/images/img.png" media="(min-width: 300px)">
-                            <source srcset="/images/img.png" media="(min-width: 300px)">
-                            <img src="" srcset="" alt="" title="">
-                        </picture>
-                        <details>
-                            <summary>
-                                Phasellus purus.
-                            </summary>
-                            <p>
-                                Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit.  Donec
-                                hendrerit tempor tellus.  Donec
-                                pretium posuere tellus.  Proin quam
-                                nisl, tincidunt et, mattis eget,
-                                convallis nec, purus.  Cum sociis
-                                natoque penatibus et magnis dis
-                                parturient montes, nascetur ridiculus
-                                mus.  Nulla posuere.  Donec vitae
-                                dolor.  Nullam tristique diam non
-                                turpis.  Cras placerat accumsan nulla.
-                                Nullam rutrum.  Nam vestibulum
-                                accumsan nisl.
-                            </p>
-                            <footer>
-                                <a href="#" title="Link to the source code for the project">source code for project</a>
-                            </footer>
-                        </details>
-                    </article>
-                    <!-- Featured Item 3 -->
-                    <article>
-                        <header>
-                            <h4>Aliquam posuere.</h4>
-                        </header>
-                        <picture>
-                            <source srcset="/images/img.png" media="(min-width: 300px)">
-                            <source srcset="/images/img.png" media="(min-width: 300px)">
-                            <img src="" srcset="" alt="" title="">
-                        </picture>
-                        <details>
-                            <summary>
-                                Aliquam posuere.
-                            </summary>
-                            <p>
-                                Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit.  Donec
-                                hendrerit tempor tellus.  Donec
-                                pretium posuere tellus.  Proin quam
-                                nisl, tincidunt et, mattis eget,
-                                convallis nec, purus.  Cum sociis
-                                natoque penatibus et magnis dis
-                                parturient montes, nascetur ridiculus
-                                mus.  Nulla posuere.  Donec vitae
-                                dolor.  Nullam tristique diam non
-                                turpis.  Cras placerat accumsan nulla.
-                                Nullam rutrum.  Nam vestibulum
-                                accumsan nisl.
-                            </p>
-                            <footer>
-                                <a href="#" title="Link to the source code for the project">source code for project</a>
-                            </footer>
-                        </details>
-                    </article>
+                    <h3>Some of my featured work</h3>
                 </header>
+                <!-- Featured Item 1 -->
+                <article>
+                    <!--header>
+                        <h4>Curabitur lacinia pulvinar nibh.</h4>
+                    </header-->
+                    <img src="./imgs/ninja-multi-pack@2x.png"
+                         srcset="" alt="Bill Murray" title="Bill Murray"
+                         data-toggle="modal"
+                         data-target="#modal-1">
+                    <details id="modal-1">
+                        <summary class="modal-header">
+                            Vivamus id enim.
+                        </summary>
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing elit.  Donec
+                            hendrerit tempor tellus.  Donec
+                            pretium posuere tellus.  Proin quam
+                            nisl, tincidunt et, mattis eget,
+                            convallis nec, purus.  Cum sociis
+                            natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus
+                            mus.  Nulla posuere.  Donec vitae
+                            dolor.  Nullam tristique diam non
+                            turpis.  Cras placerat accumsan nulla.
+                            Nullam rutrum.  Nam vestibulum
+                            accumsan nisl.
+                        </p>
+                    </details>
+                    <footer>
+                        <a href="#" title="Link to the source code for the project">See the source...</a>
+                    </footer>
+                </article>
+                <!-- Featured Item 2 -->
+                <article>
+                    <!--header>
+                        <h4>Phasellus purus.</h4>
+                    </header-->
+                    <img src="./imgs/chars-1@2x.png" srcset="" alt="" title="Bill Murray">
+                    <details>
+                        <summary>
+                            Phasellus purus.
+                        </summary>
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing elit.  Donec
+                            hendrerit tempor tellus.  Donec
+                            pretium posuere tellus.  Proin quam
+                            nisl, tincidunt et, mattis eget,
+                            convallis nec, purus.  Cum sociis
+                            natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus
+                            mus.  Nulla posuere.  Donec vitae
+                            dolor.  Nullam tristique diam non
+                            turpis.  Cras placerat accumsan nulla.
+                            Nullam rutrum.  Nam vestibulum
+                            accumsan nisl.
+                        </p>
+                    </details>
+                    <footer>
+                        <a href="#" title="Link to the source code for the project">See the source...</a>
+                    </footer>
+                </article>
+                <!-- Featured Item 3 -->
+                <article>
+                    <!--header>
+                        <h4>Aliquam posuere.</h4>
+                    </header-->
+                    <img src="./imgs/murrayx600x600.jpg" srcset="" alt="" title="Bill Murray">
+                    <details>
+                        <summary>
+                            Aliquam posuere.
+                        </summary>
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing elit.  Donec
+                            hendrerit tempor tellus.  Donec
+                            pretium posuere tellus.  Proin quam
+                            nisl, tincidunt et, mattis eget,
+                            convallis nec, purus.  Cum sociis
+                            natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus
+                            mus.  Nulla posuere.  Donec vitae
+                            dolor.  Nullam tristique diam non
+                            turpis.  Cras placerat accumsan nulla.
+                            Nullam rutrum.  Nam vestibulum
+                            accumsan nisl.
+                        </p>
+                    </details>
+                    <footer>
+                        <a href="#" title="Link to the source code for the project">See the source...</a>
+                    </footer>
+                </article>
             </section>
         </main>
         <footer>
-            <p>
-                Get in touch :
-            </p>
             <!-- Let's add some hcard micro-formats to the page. See:
             http://html5doctor.com/microformats/-->
-            <p class="vcard">
-                <span class="fn">Kris Foster</span>
+            <div class="vcard">
+                <h4 class="fn">Kris Foster</h4>
                 <ul>
                     <li>
                         <a rel="me" href="http://krismde.me" title="My Personal Web -site">My home on the Web</a>
@@ -165,7 +156,7 @@
                             LinkedIn (KristianFoster)</a>
                     </li>
                 </ul>
-            </p>
+            </div>
         </footer>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -173,5 +164,22 @@
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="./bower_components/bootstrap//dist/js/bootstrap.min.js"></script>
+        <script>
+         (function($) {
+             'use strict';
+
+             var $clickableImgs       = $('img[data-toggle]'),
+                 transition;
+
+             $clickableImgs.each(function() {
+                 var that = $(this);
+                 console.dir(that);
+                 $( this ).on('click', function (index, that) {
+                     //console.dir(elem);
+                     console.log('>>');
+                 })
+             });
+         })(jQuery);
+        </script>
     </body>
 </html>

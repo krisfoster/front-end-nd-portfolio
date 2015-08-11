@@ -1,0 +1,262 @@
+//
+// My styles built out bootstrap...
+// Done this for various reasons - see the readme.
+//
+
+//
+// Variables
+//
+
+// background image
+@back-img-colour:  aliceblue;
+@back-img-url:     '../imgs/hexellence/hexellence.png';
+
+// header fonts
+// for smaller screens
+@font-size-h1-small:  floor((@font-size-base * 1.2));
+@font-size-h2-small:  floor((@font-size-base * 0.9));
+@font-size-h3-small:  ceil((@font-size-base * 0.8));
+@font-size-h4-small:  ceil((@font-size-base * 0.7));
+
+// for bigger screens
+@font-size-h1-big:    floor((@font-size-base * 1.2));
+@font-size-h2-big:    floor((@font-size-base * 0.9));
+@font-size-h3-big:    ceil((@font-size-base * 0.8));
+@font-size-h4-big:    ceil((@font-size-base * 0.7));
+
+// header colours - these don't change bewteen sizes
+// ... yet
+@font-colour-h1:      #e01a29;
+@font-bcolour-h1:     #004000;
+@font-colour-h2:      #004000;
+@font-bcolour-h2:     #e01a29;
+@font-colour-h3:      #004000;
+@font-bcolour-h3:     #e01a29;
+@font-colour-h4:      #004000;
+@font-bcolour-h4:     #e01a29;
+
+// body fonts
+@font-family-body:    'Roboto Mono', sans-serif;
+
+// special font size for my name - coz I'm special :)
+@font-size-name:     @font-size-h3-small;
+@font-colour-name:    @font-colour-h2;
+@font-bcolour-name:    @font-bcolour-h2;
+
+//
+// Base body styles - mainly adding new stuff where
+// bootstrap don't work for me
+//
+body {
+  background: url(@back-img-url) repeat @back-img-colour;
+  font-family: @font-family-body;
+}
+
+// Header
+//
+body > header {
+  .make-row();
+  // background: url(../imgs/ninja-smile.svg);
+  // background-size: 30%;
+  // background-repeat: no-repeat;
+  // background-position: 0% 50% cneter;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  color: @font-colour-h1;
+  font-size: @font-size-h1-small;
+  background-color: @font-bcolour-h1;
+  padding: 0.25em;
+}
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: @font-colour-h2;
+  font-size: @font-size-h2-small;
+  background-color: @font-bcolour-h2;
+  padding: 0.25em;
+}
+
+h3 {
+  font-family: 'Press Start 2P', cursive;
+  color: @font-colour-h3;
+  font-size: @font-size-h3-small;
+  background-color: @font-bcolour-h3;
+  padding: 0.45em 0.45em;
+}
+
+h4 {
+  font-family: 'Press Start 2P', cursive;
+  color: @font-colour-h4;
+  font-size: @font-size-h4-small;
+  background-color: @font-bcolour-h4;
+  padding: 0.25em;
+}
+
+body > header > h1 {
+  display: inline;
+  float: left;
+  margin-left: 0.5em;
+}
+
+body > header > h2 {
+  display: inline;
+  float: left;
+  margin-left: 0.5em;
+  clear: both;
+}
+
+body > main {
+  .make-row();
+  padding: 0.5em;
+}
+
+body > main > section#hero {
+  .make-row();
+  padding: 0.5em;
+}
+
+body > main > section#featured-work {
+  .make-row();
+}
+
+section > header {
+  .make-xs-column(12);
+  .make-md-column(12);
+}
+
+section > article {
+  .make-xs-column(12);
+  .make-md-column(12);
+}
+
+section > article > details {
+  display: none;
+}
+
+// Styles for images
+// * imgs should look a little like thumbnails
+// *
+
+// This is lifted from the bootstrap scaffolding
+//
+img {
+  max-width: 100%;
+  .img-responsive();
+}
+
+// This is lifted from the bootstrap scaffolding
+//
+main > section > article > img {
+  padding: @thumbnail-padding;
+  line-height: @line-height-base;
+  background-color: @back-img-colour;
+  border: 1px solid @thumbnail-border;
+  border-radius: @thumbnail-border-radius;
+  .transition(all .2s ease-in-out);
+
+  // Keep them at most 100% wide
+  .img-responsive(inline-block);
+}
+
+main > section > img {
+  padding: @thumbnail-padding;
+  line-height: @line-height-base;
+  background-color: @back-img-colour;
+  border: 1px solid @thumbnail-border;
+  border-radius: @thumbnail-border-radius;
+  .transition(all .2s ease-in-out);
+  // Keep them at most 100% wide
+  .img-responsive(inline-block);
+}
+
+//
+// Footer
+//
+// Lets have a dividee. Not a perfect solution as due to
+// padding this doesn't span the full width of the above
+// elements. But I can live with it for the effort involved in
+// sorting it. TBH the use of a H$ gives a divider anyway but
+// I like this so it stays
+body > footer {
+  border-top:  1px solid @font-bcolour-h1;
+  margin-top:  0.5em;
+  padding-top: 0.5em;
+}
+
+// make the lists in the footer, containgin contact details,
+// seem a little nicer. Loose the padding, styles etc.
+body > footer ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+body > footer li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+// Style my name - gotta be good
+body > footer span.fn {
+  color: @font-colour-name;
+  background-color: @font-bcolour-name;
+  font-size: @font-size-name;
+  width: 100%;
+}
+//
+// Breakpoints
+//
+
+// 00 : 500px - let's make the text a bit bigger on bigger screens
+// especially for the landscape orientation.
+// Mainly this was added as things looked good on iphone 6 but not
+// so good on nexus 7 - debatable use of the term good..
+@media screen and (min-width: 500px) {
+  Body > header > h1 {
+    font-size: floor((@font-size-base * 2.0));
+  }
+  body > header > h2 {
+    font-size: floor((@font-size-base * 1.6));
+  }
+  body > header > h3 {
+    font-size: floor((@font-size-base * 1.4));
+  }
+  body > header > h4 {
+    font-size: floor((@font-size-base * 1.4));
+  }
+}
+
+//
+// 01 : 800px - we want to swap out to the original mockup
+// shape at around this size. Any smaller and it doesn't work.
+// So we will see a shift to a fluid grid layout. The whole thing
+// fluid (essentially I have done what I think works I am afraid)
+//
+@media screen and (min-width: 800px) {
+  body > main {
+    margin-left:  auto;
+    margin-right: auto;
+    max-width: 750px;
+  }
+  body > header {
+    margin-left:  auto;
+    margin-right: auto;
+    max-width: 750px;
+  }
+  body > main > section > article {
+    max-width: 30%;
+    margin-left: 0;
+    margin-right: 5%;
+    color: red;
+  }
+  body > main > section > article:last-of-type {
+    max-width: 30%;
+    margin-right: 0;
+  }
+  body > footer {
+    margin-left:  auto;
+    margin-right: auto;
+    max-width: 750px;
+  }
+}
