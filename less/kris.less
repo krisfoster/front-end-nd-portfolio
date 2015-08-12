@@ -43,9 +43,13 @@
 @font-family-body:    'Roboto Mono', sans-serif;
 
 // special font size for my name - coz I'm special :)
-@font-size-name:     @font-size-h3-small;
+@font-size-name:      @font-size-h3-small;
 @font-colour-name:    @font-colour-h2;
-@font-bcolour-name:    @font-bcolour-h2;
+@font-bcolour-name:   @font-bcolour-h2;
+
+// for the source code links
+@font-source-link-colour: #7ae359;
+@font-size-source-link:   ceil((@font-size-base * 0.9));
 
 //
 // Base body styles - mainly adding new stuff where
@@ -153,6 +157,19 @@ section > article {
 section > article > details p {
   display: block;
 }
+
+// Style the see source code links
+article footer {
+  margin: 1em;
+  a {
+    font-size: @font-size-source-link;
+    color: white;
+    background-color: @font-bcolour-h4;
+    padding: 0.15em;
+    border-bottom: 4px solid @font-source-link-colour;
+  }
+}
+
 
 // Styles for images
 // * imgs should look a little like thumbnails
