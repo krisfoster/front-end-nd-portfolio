@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Set encoid correctly -->
         <meta charset="utf-8">
+        <!-- Use the latest version of IE available -->
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <!-- Set a viewport for mobile devices -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description"
-              content="Portfolio for Kris Foster - a front-end Ninja!">
+              content="Portfolio for Kris Foster - 8-bit Ninja!">
         <title>Kris Foster - Full Stack Web Ninja!</title>
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!--
+        This style-sheet si compiled from less, so will be minimised! Please look at the less
+        source files bundled to see what if going on with the styles.
+        -->
         <link rel="stylesheet" href="./css/main.css">
+        <!--
+        Using remodal for the pop-ups. Seems nicer than bootstraps to me. Was much easier
+        to get working without needing to add loads of scaffolding html in order to make the
+        modal
+        -->
+        <link rel="stylesheet" href="./bower_components/remodal/dist/remodal.css">
+        <link rel="stylesheet" href="./bower_components/remodal//dist/remodal-default-theme.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <!-- Google fonts -->
         <link href='http://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono:400,700,500' rel='stylesheet' type='text/css'>
     </head>
     <body class="container">
+        <!-- Describes the site / page -->
         <header>
             <!-- TODO: Need a logo here -->
-            <h1>Kris Foster</h1>
+            <a href="#footer">
+                <h1>Kris Foster</h1>
+            </a>
             <h2>8-bit Ninja!</h2>
         </header>
+        <!-- Not currnetly used - but will be as more is added to the site -->
         <nav id="site-nav">
         </nav>
+        <!-- Main content area -->
         <main>
             <section id="hero">
                 <!-- TODO : Carousel? -->
                 <img src="./imgs/slice-1@3x.png" srcset=""
-                     alt="Girl with numerous questions" title="Do you have Questions? I know I do.">
+                     alt="Girl with numerous questions"
+                     title="Do you have Questions? I know I do.">
             </section>
+            <!--
+            The fetured work is held in html5 article elements, the details of which
+            are held in a "details" element. The details element is hidden and its contents
+            are used as a modal dialog that is opened when the user clicks on the image
+            The remodal script is included at the end of the page along with a polyfill
+            for the details element
+            -->
             <section id="featured-work">
                 <header>
                     <h3>Some of my featured work</h3>
                 </header>
                 <!-- Featured Item 1 -->
                 <article>
-                    <!--header>
-                        <h4>Curabitur lacinia pulvinar nibh.</h4>
-                    </header-->
-                    <img src="./imgs/ninja-multi-pack@2x.png"
-                         srcset="" alt="Bill Murray" title="Bill Murray"
-                         data-toggle="modal"
-                         data-target="#modal-1">
-                    <details id="modal-1">
+                    <a href="#work-1">
+                        <img src="./imgs/ninja-multi-pack@2x.png"
+                             srcset="" alt="Ninja Multi Pack"
+                             title="Ninja Multi-Pack">
+                    </a>
+                    <details class="remodal" data-remodal-id="work-1" open>
+                        <button data-remodal-action="close" class="remodal-close"></button>
                         <summary class="modal-header">
                             Vivamus id enim.
                         </summary>
@@ -64,6 +89,8 @@
                             Nullam rutrum.  Nam vestibulum
                             accumsan nisl.
                         </p>
+                        <br>
+                        <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
                     </details>
                     <footer>
                         <a href="#" title="Link to the source code for the project">See the source...</a>
@@ -71,12 +98,13 @@
                 </article>
                 <!-- Featured Item 2 -->
                 <article>
-                    <!--header>
-                        <h4>Phasellus purus.</h4>
-                    </header-->
-                    <img src="./imgs/chars-1@2x.png" srcset="" alt="" title="Bill Murray">
-                    <details>
-                        <summary>
+                    <a href="#work-2">
+                        <img src="./imgs/chars-1@2x.png" srcset="" alt="8-bi Charecters"
+                             title="8-bit charecters">
+                    </a>
+                    <details class="remodal" data-remodal-id="work-2" open>
+                        <button data-remodal-action="close" class="remodal-close"></button>
+                        <summary class="modal-header">
                             Phasellus purus.
                         </summary>
                         <p>
@@ -94,6 +122,7 @@
                             Nullam rutrum.  Nam vestibulum
                             accumsan nisl.
                         </p>
+                        <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
                     </details>
                     <footer>
                         <a href="#" title="Link to the source code for the project">See the source...</a>
@@ -101,12 +130,13 @@
                 </article>
                 <!-- Featured Item 3 -->
                 <article>
-                    <!--header>
-                        <h4>Aliquam posuere.</h4>
-                    </header-->
-                    <img src="./imgs/murrayx600x600.jpg" srcset="" alt="" title="Bill Murray">
-                    <details>
-                        <summary>
+                    <a href="#work-3">
+                        <img src="./imgs/murrayx600x600.jpg" srcset="" alt="Bill Murray"
+                             title="Bill Murray">
+                    </a>
+                    <details class="remodal" data-remodal-id="work-3" open>
+                        <button data-remodal-action="close" class="remodal-close"></button>
+                        <summary class="modal-header">
                             Aliquam posuere.
                         </summary>
                         <p>
@@ -124,6 +154,7 @@
                             Nullam rutrum.  Nam vestibulum
                             accumsan nisl.
                         </p>
+                        <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
                     </details>
                     <footer>
                         <a href="#" title="Link to the source code for the project">See the source...</a>
@@ -131,9 +162,12 @@
                 </article>
             </section>
         </main>
-        <footer>
-            <!-- Let's add some hcard micro-formats to the page. See:
-            http://html5doctor.com/microformats/-->
+        <footer id="footer">
+            <!--
+            Footer to contain my contact details
+            Let's add some hcard micro-formats to the page. See:
+            http://html5doctor.com/microformats/
+            -->
             <div class="vcard">
                 <h4 class="fn">Kris Foster</h4>
                 <ul>
@@ -161,25 +195,12 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="./bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
-
+        <!-- Details poly-fill:
+        https://raw.githubusercontent.com/manuelbieh/Details-Polyfill/master/details.polyfill.min.js-->
+        <script src="./js/details.polyfill.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="./bower_components/bootstrap//dist/js/bootstrap.min.js"></script>
-        <script>
-         (function($) {
-             'use strict';
-
-             var $clickableImgs       = $('img[data-toggle]'),
-                 transition;
-
-             $clickableImgs.each(function() {
-                 var that = $(this);
-                 console.dir(that);
-                 $( this ).on('click', function (index, that) {
-                     //console.dir(elem);
-                     console.log('>>');
-                 })
-             });
-         })(jQuery);
-        </script>
+        <!--script src="./bower_components/bootstrap//dist/js/bootstrap.min.js"></script-->
+        <!-- include re-modal script for rendering modals -->
+        <script src="./bower_components/remodal/dist/remodal.min.js"></script>
     </body>
 </html>
